@@ -154,7 +154,7 @@
 // }
 
 
-// 8 - Acesso a um Sistema:
+// 8 - Acesso a um Sistema: .
 // Peça um nome de usuário e uma senha. Se forem "admin" e "1234", exiba "Acesso permitido", caso contrário, "Acesso negado".
 
 // Pede ao usuário para digitar o nome de usuário
