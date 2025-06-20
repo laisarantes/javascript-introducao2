@@ -44,16 +44,6 @@
         const inputDia = document.querySelector("#dia");
         const inputMes = document.querySelector("#mes");        
 
-                //verificação: se algum campo estiver vazio
-
-        if (tarefa == "") {
-        //mostre uma mensagem de erro
-        let mensagemErro = "Digite seu aniversario para ver seu nome de forrozeiro!"
-        mensagem.textContent = mensagemErro
-    } else {
-        //mensagem de tarefa adicionada com sucesso
-        let mensagemSucesso = "Nome adicionada com sucesso!"
-        mensagem.textContent = mensagemSucesso
 
         //se os campos estiverem preenchidos
         div.innerHTML = `Escolher o dia: ${inputDia.value}, escolher o mês: ${inputMes.value}`
