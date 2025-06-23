@@ -104,17 +104,17 @@
 
 // Verifica a situação do aluno com base na média
 // if (media >= 7) {
-//   console.log("Aprovado");
+//   console.log(`Média: ${media}, Parabéns você foi aprovado`);
 // } else if (media >= 5) {
-//   console.log("Recuperação");
+//   console.log(`Média: ${media}, Você está de recuperação`);
 // } else {
-//   console.log("Reprovado");
+//   console.log("`Média: ${media}, Você foi reprovado`");
 // }
 
 
-// Questão 6 - Desconto em Compra
+//Questão 6 - Desconto em Compra
 
-// Solicita o valor da compra e converte para número com ponto flutuante
+//Solicita o valor da compra e converte para número inteiro (ponto flutuante)
 // let valorCompra = parseFloat(prompt("Digite o valor da compra:"));
 
 // Verifica se o valor é maior que R$100
@@ -130,8 +130,8 @@
 // console.log("Valor final: R$" + valorFinal.toFixed(2));
 // } else {
 // Caso o valor seja R$100 ou menos, não há desconto
-// console.log("Sem desconto.");
-// console.
+// console.log(`Valor a pagar: R$ ${(valor).toFixed(2)}`);
+// }
 
 /// Questão 7 - Verificação de Ano Bissexto
 
@@ -197,8 +197,192 @@
 // Verifica se o número está entre 10 e 50 (inclusive)
 // if (numero >= 10 && numero <= 50) {
 // Se estiver dentro do intervalo, exibe esta mensagem
-// console.log("Está no intervalo");
+// console.log(`O numero ${numero} está no intervalo entre 10 e 50`);
 // } else {
 // Se não estiver dentro do intervalo, exibe esta mensagem
 // console.log("Fora do intervalo");
+
+// Exercício 11 – Verificação de Nota Válida
+// Peça uma nota de 0 a 10. Se for válida, exiba "Nota registrada", caso contrário, mostre "Nota inválida".
+
+// let nota = parseFloat(prompt("Digite uma nota"));
+
+// let nota = parseFloat(prompt("Digite uma nota:"));
+
+// if (nota >= 0 && nota <= 10) {
+//   console.log("Nota válida");
+// } else {
+//   console.log("Nota inválida");
+// }
+
+
+// Exercício 12 – Categoria de Idade
+// Peça a idade e exiba a categoria:
+
+// 0 a 12: "Criança"
+
+// 13 a 17: "Adolescente"
+
+// 18 a 59: "Adulto"
+
+// 60 ou mais: "Idoso"
+
+
+// Solicita ao usuário que digite a idade e converte para número inteiro
+// let idade = parseInt(prompt("Digite sua idade:"));
+
+// Verifica se a idade está entre 0 e 12 (inclusive)
+// if (idade >= 0 && idade <= 12) {
+//   console.log("Criança");
+// }
+// Se não for criança, verifica se está entre 13 e 17
+// else if (idade >= 13 && idade <= 17) {
+//   console.log("Adolescente");
+// }
+// Se não for adolescente, verifica se está entre 18 e 59
+// else if (idade >= 18 && idade <= 59) {
+//   console.log("Adulto");
+// }
+// Se nenhuma das anteriores for verdadeira, então é 60 ou mais
+// else {
+//   console.log("Idoso");
+// }
+
+// Exercício 13 – Comparação de Três Números
+// Peça três números e informe:
+// O maior
+// O menor
+// Se algum deles for igual
+
+// Solicita três números ao usuário
+// let numero1 = parseFloat(prompt("Digite o primeiro número:"));
+// let numero2 = parseFloat(prompt("Digite o segundo número:"));
+// let numero3 = parseFloat(prompt("Digite o terceiro número:"));
+
+// Compara os três números para saber qual é o maior
+// if (numero1 >= numero2 && numero1 >= numero3) {
+//   console.log("O maior número é:", numero1);
+// } else if (numero2 >= numero1 && numero2 >= numero3) {
+//   console.log("O maior número é:", numero2);
+// } else {
+//   console.log("O maior número é:", numero3);
+// }
+
+// Exercício 14 – Login Simples com Tentativas
+// Permita até 3 tentativas para digitar o usuário e senha corretos ("admin" / "1234").
+// Se acertar, exibe "Acesso permitido". Se errar 3 vezes, exibe "Conta bloqueada".
+
+// let tentativas = 0; Começa com zero tentativas
+
+// while (tentativas < 3) {
+  // Pede usuário e senha
+//   let usuario = prompt("Digite o nome de usuário:");
+//   let senha = prompt("Digite a senha:");
+
+  // Verifica se estão corretos
+//   if (usuario === "admin" && senha === "1234") {
+//     console.log("Acesso permitido");
+//     break; // Sai do laço se acertar
+//   } else {
+//     console.log("Usuário ou senha incorretos.");
+//     tentativas++; // Soma mais uma tentativa
+//   }
+// }
+
+// Se tentou 3 vezes e ainda não acertou, bloqueia
+// if (tentativas === 3) {
+//   console.log("Conta bloqueada");
+// }
+
+
+// Exercício 15 – Verificação de Triângulo
+
+ // Pede os lados do triângulo
+// let lado1 = parseFloat(prompt("Digite o lado 1:"));
+// let lado2 = parseFloat(prompt("Digite o lado 2:"));
+// let lado3 = parseFloat(prompt("Digite o lado 3:"));
+
+// // Verifica se forma um triângulo: a soma de dois lados > o terceiro para todos os casos
+// if (
+//   lado1 + lado2 > lado3 &&
+//   lado1 + lado3 > lado2 &&
+//   lado2 + lado3 > lado1
+// ) {
+//   // Se for triângulo, verifica o tipo
+//   if (lado1 === lado2 && lado2 === lado3) {
+//     console.log("Triângulo Equilátero");
+//   } else if (lado1 === lado2 || lado2 === lado3 || lado1 === lado3) {
+//     console.log("Triângulo Isósceles");
+//   } else {
+//     console.log("Triângulo Escaleno");
+//   }
+// } else {
+//   console.log("Não é possível formar um triângulo");
+// }
+
+
+// Exercício 16 – Mês por Número
+
+// let mes = parseInt(prompt("Digite um número de 1 a 12 para o mês:"));
+
+// switch (mes) {
+//   case 1:
+//     console.log("Janeiro");
+//     break;
+//   case 2:
+//     console.log("Fevereiro");
+//     break;
+//   case 3:
+//     console.log("Março");
+//     break;
+//   case 4:
+//     console.log("Abril");
+//     break;
+//   case 5:
+//     console.log("Maio");
+//     break;
+//   case 6:
+//     console.log("Junho");
+//     break;
+//   case 7:
+//     console.log("Julho");
+//     break;
+//   case 8:
+//     console.log("Agosto");
+//     break;
+//   case 9:
+//     console.log("Setembro");
+//     break;
+//   case 10:
+//     console.log("Outubro");
+//     break;
+//   case 11:
+//     console.log("Novembro");
+//     break;
+//   case 12:
+//     console.log("Dezembro");
+//     break;
+//   default:
+//     console.log("Mês inválido");
+// }
+
+
+// Exercício 17 – Conversor de Notas
+
+// let nota = parseFloat(prompt("Digite a nota (0 a 10):"));
+
+// if (nota >= 9 && nota <= 10) {
+//   console.log("Conceito A");
+// } else if (nota >= 7 && nota < 9) {
+//   console.log("Conceito B");
+// } else if (nota >= 5 && nota < 7) {
+//   console.log("Conceito C");
+// } else if (nota >= 3 && nota < 5) {
+//   console.log("Conceito D");
+// } else if (nota >= 0 && nota < 3) {
+//   console.log("Conceito E");
+// } else {
+//   console.log("Nota inválida");
+// }
+
 

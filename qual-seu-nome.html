@@ -5,55 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Descubra seu Nome</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
-    body {
-      background-image: url('img/forrozeiro.png');
-      background-size: 100%;
-      background-position: center;
-
-    }
-  </style>
+      body {
+        background-image: url("img/forrozeiro.png");
+        background-size: 100%;
+        background-position: center;
+      }
+    </style>
   </head>
- 
- <body class="flex items-center justify-center h-screen bg-yellow-400">
-    <div class="w-[500px] shadow-[0_0px_15px_rgba(0,0,0,0.9)] bg-[#834e33] rounded-xl p-4">
-    <h1 class="mb-8 font-fredoka text-2xl text-[#fefae0] text-center">Descubra seu nome de Forrozeiro</h1>
-    <div class="flex gap-3">
+
+  <body class="flex items-center justify-center h-screen bg-yellow-400">
+    <div
+      class="w-[500px] shadow-[0_0px_15px_rgba(0,0,0,0.9)] bg-[#834e33] rounded-xl p-4"
+    >
+      <h1 class="mb-8 font-fredoka text-2xl text-[#fefae0] text-center">
+        Descubra seu nome de Forrozeiro
+      </h1>
+      <div class="flex gap-3">
         <div class="flex-1">
-            <label for="" class="p-3 text-[#fefae0]">Dia do aniversário</label>
-            <input id="dia" type="number" placeholder="Dia do seu aniversário" required class="bg-white border border-[#bc6c25] p-3 mt-3 rounded w-full focus:outline-none focus:ring-2 focus:ring-[#bc6c25]">
+          <label for="" class="p-3 text-[#fefae0]">Dia do aniversário</label>
+          <input
+            id="dia"
+            type="number"
+            placeholder="Dia do seu aniversário"
+            required
+            class="bg-white border border-[#bc6c25] p-3 mt-3 rounded w-full focus:outline-none focus:ring-2 focus:ring-[#bc6c25]"
+          />
         </div>
         <div class="flex-1">
-            <label for="" class="p-1 text-[#fefae0]">Mês do aniversário</label>
-            <input id="mes" type="text" required placeholder="Mês do seu aniversário" required class="bg-white border border-[#bc6c25] p-3 mt-3 rounded w-full focus:outline-none focus:ring-2 focus:ring-[#bc6c25]">
+          <label for="" class="p-1 text-[#fefae0]">Mês do aniversário</label>
+          <input
+            id="mes"
+            type="text"
+            required
+            placeholder="Mês do seu aniversário"
+            required
+            class="bg-white border border-[#bc6c25] p-3 mt-3 rounded w-full focus:outline-none focus:ring-2 focus:ring-[#bc6c25]"
+          />
         </div>
+      </div>
 
-    </div>
-
-      <button onclick="escolherNome()" id="button" class="w-[100%] border border-[#1b4c1b] text-white bg-[#007f5f]  hover:bg-[#00624a] font-bold shadow duration-200 py-3 px-5 rounded-lg mt-3 cursor-pointer ">
+      <button
+        onclick="escolherNome()"
+        id="button"
+        class="w-[100%] border border-[#1b4c1b] text-white bg-[#007f5f] hover:bg-[#00624a] font-bold shadow duration-200 py-3 px-5 rounded-lg mt-3 cursor-pointer"
+      >
         Descobrir
       </button>
-      <div id="mensagem"></div>
+      <div id="mensagem" class="text-center font-bold"></div>
     </div>
 
     <script>
       function escolherNome() {
-        const div = document.querySelector("#mensagem");
-        const inputDia = document.querySelector("#dia");
-        const inputMes = document.querySelector("#mes");        
+        let div = document.querySelector("#mensagem");
+        let inputDia = document.querySelector("#dia").value;
+        let inputMes = document.querySelector("#mes").value;
+        let nome = "";
 
+        // condições dos dias
+        if (inputDia == 1) {
+          nome = "Marcão";
+        } else if (inputDia == 2) {
+          nome = "Wesley";
+        } else if (inputDia == 3) {
+          nome = "Wesley";
+        }
+
+        // condições dos meses
+        if (inputMes == 1) {
+          nome += " dos teclados";
+        } else if (inputMes == 2) {
+          nome += " pegador";
+        } else if (inputMes == 3) {
+          nome += " pipocado";
+        }
 
         //se os campos estiverem preenchidos
-        div.innerHTML = `Escolher o dia: ${inputDia.value}, escolher o mês: ${inputMes.value}`
+        div.innerHTML = nome;
 
         //limpa o campo
-        inputDia.value = ""
-        inputMes.value = ""
-
-
-
+        inputDia.value = "";
+        inputMes.value = "";
       }
     </script>
   </body>
